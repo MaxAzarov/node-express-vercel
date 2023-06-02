@@ -11,7 +11,8 @@ app.use(express.json());
 app.use("/home", home);
 
 app.get("/test", (request, response) => {
-  response.sendfile("./index.html");
+  console.log(__dirname);
+  response.sendfile(__dirname + "./index.html");
 });
 
 // connection
